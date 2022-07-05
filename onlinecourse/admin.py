@@ -3,8 +3,8 @@ from django.contrib import admin
 from .models import Course, Lesson, Instructor, Learner, Question, Choice, Submission
 
 # <HINT> Register QuestionInline and ChoiceInline classes here
-class QuestionInline(admin.StackedInline):
-    model = Question
+class ChoiceInline(admin.StackedInline):
+    model = Choice
     extra = 5
 
 class LessonInline(admin.StackedInline):
@@ -25,7 +25,7 @@ class LessonAdmin(admin.ModelAdmin):
     
 class QuestionAdmin(admin.ModelAdmin):
     inlines = [ChoiceInline]
-    fields = ('question_text', 'grade', 'lesson_id')
+    fields = ('question_text', 'grade', 'course')
 
 # <HINT> Register Question and Choice models here
 
