@@ -28,7 +28,7 @@ DEBUG = True
 
 # <HINT> add your cloud host here
 ALLOWED_HOSTS = [
-#     'localhost
+     'jasc.us-south.cf.appdomain.cloud'
 ]
 
 
