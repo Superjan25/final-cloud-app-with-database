@@ -60,13 +60,13 @@
                     <div class="form-check">
                         {% if choice.id in selected %}
                             {% if choice.is_correct == True %}
-                                <label style="color:#2ea94a;font-weight:bold">Correct answer: {{choice.choice_text}}</label>
+                                <label class="text-success" style="font-weight:bold">Correct answer: {{choice.choice_text}}</label>
                             {% else %}
-                                <label style="color:red;font-weight:bold">Wrong answer: {{choice.choice_text}}</label>
+                                <label class="text-danger" style="font-weight:bold">Wrong answer: {{choice.choice_text}}</label>
                             {% endif %}
                         {% else %}
                             {% if choice.is_correct == True %}
-                                <label style="color:yellow;font-weight:bold">Not selected: {{choice.choice_text}}</label>
+                                <label class="text-warning" style="font-weight:bold">Not selected: {{choice.choice_text}}</label>
                             {% else %}
                                 <label>{{choice.choice_text}}</label>
                             {% endif %}
